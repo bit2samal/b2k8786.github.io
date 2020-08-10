@@ -6,9 +6,14 @@ body {
     max-width: 1200px;
     background: #fff;
     width: 100%;
-    margin: 0 auto;
+    margin: 79px auto 0px;
     padding: 15px;
     box-shadow: 1px 1px 3px #0003;
+    position: relative;
+    min-height: 66vh;
+}
+header {
+    text-align: right;
 }
 #my-image {
     background-image: url(./images/me.jpg);
@@ -17,4 +22,7 @@ body {
     background-size: 500px auto;
     background-position: 45% -23px;
     border-radius: 30px;
+    position: absolute;
+    top: -65px;
+    filter: drop-shadow(2px 2px 2px #0007);
 }
