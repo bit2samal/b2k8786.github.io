@@ -1,5 +1,20 @@
-#my-image{
+body {
+    background: #eee;
+    margin: 0;
+}
+.page {
+    max-width: 1200px;
+    background: #fff;
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px;
+    box-shadow: 1px 1px 3px #0003;
+}
+#my-image {
     background-image: url(./images/me.jpg);
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
+    background-size: 500px auto;
+    background-position: 45% -23px;
+    border-radius: 30px;
 }
