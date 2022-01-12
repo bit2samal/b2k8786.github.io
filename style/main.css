@@ -1,0 +1,64 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200&display=swap');
+body {
+    background: #eee;
+    margin: 0;
+    font-family: 'Noto Sans Display';
+    font-weight: 400;
+    color: #777;
+    perspective: 1000px;
+    perspective-origin: 0px;
+    transform: translate3d(22,34,44);
+    transform-origin: center center;
+}
+.block {
+    max-width: 1200px;
+    background: #fff;
+    width: 90vw;
+    padding: 15px;
+    box-shadow: 1px 1px 3px #0003;
+    position: relative;
+    min-height: 150px;
+    border-radius: 4pt;
+    margin: 20px auto;
+    transition: all .2s ease-in-out 0s;
+    z-index: 0;
+}
+.block:hover{
+    z-index: 1;
+}
+.block-title{
+    font-size: 24px;
+    color: #444;
+    font-style: italic;
+    font-weight: 600;
+}
+.block li{
+    list-style: none;
+    line-height: 1.5em;
+}
+#header {
+    text-align: right;
+     margin: 75px auto 0px;
+     z-index: 99;
+}
+
+#my-image {
+    background-image: url(../images/me.jpg);
+    width: 225px;
+    height: 225px;
+    background-size: 500px auto;
+    background-position: 45% -23px;
+    border-radius: 50%;
+    position: absolute;
+    top: -25%;
+    border:15px solid #eee;
+}
+name{
+    font-size: 55px;
+    display: block;
+}
+email{
+    font-size: 24px;
+    color: #888;
+}

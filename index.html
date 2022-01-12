@@ -1,24 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anil K Samal | Interactive CV</title>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/main.css">
 </head>
-<body>
-    <section class="page">
-        <header>
-            <div id="my-image"></div>
-            <div id="my-info">
-                Anil K Samal
-                b2k8786@gmail.com
-            </div>
-        </header>
-        <footer>
 
-        </footer>
+<body>
+    <section class="block" id="header">
+        <div id="my-image"></div>
+        <div id="my-info">
+            <name>Anil kumar Samal</name>
+            <email>b2k8786@gmail.com</email>
+        </div>
     </section>
+    <section class="block" id="education">
+        <span class="block-title">Education / Certifications</span>
+        <Ul>
+            <li>Masters in computer Applications (MCA)</li>
+            <li>PHP from NIIT</li>
+            <li>Diploma in PC Architecture & Networking</li>
+            <li>Six month Software Training in Advance Java</li>
+        </Ul>
+    </section>
+    <section class="block" id="experience">
+        <span class="block-title">Work History (experience <year val="2014">8</year>)</span>
+        <Ul>
+            <li>JS software solutions (1 year)</li>
+            <li>89 Business street (1 year 6 months)</li>
+            <li>Conjoinix (4 years 9 months)</li>
+            <li>Founder and lightning (AKA Ucreate.it) (1 year)</li>
+        </Ul>
+    </section>
+    <section class="block" id="Skills">
+        <span class="block-title">Technical skills</span>
+        <Ul>
+            <li>
+                PHP (8 years)
+                <ul>
+                    <li>
+                        Worked on various frameworks.
+                        Good knowledge of Core architecture.
+                        Created custom frameworks.
+
+                    </li>
+                </ul>
+            </li>
+            <li>
+                JavaScript (7 years)
+                <ul>
+                    <li>
+                        Good knowledge of javascript, jQuery.
+                        Created various libraries and frameworks in javascript and jQuery.
+
+                    </li>
+                </ul>
+            </li>
+            <li>
+                HTML & CSS (7 years)
+                <ul>
+                    <li>
+                        Good knowledge of CSS and can create and handle complete site and advance css
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Node JS (3 years)
+                <ul>
+                    <li>
+                        Created BE APIs and work with express framework and core node js
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Golang (1 year)
+                <ul>
+                    <li>
+                        Some initial knowledge of golang and pursuing it to expertise.
+                    </li>
+                </ul>
+            </li>
+        </Ul>
+    </section>
+    <!-- <section class="block" id="education">
+        <span class="block-title">Education / Certifications</span>
+        <Ul>
+            <li>PHP from NIIT</li>
+            <li>Diploma in PC Architecture & Networking</li>
+            <li>Six month Software Training in Advance Java (BTES)</li>
+        </Ul>
+    </section> -->
+    <script>
+        var current_year = (new Date()).getFullYear();
+        document.querySelectorAll('year').forEach((year_tag) => {
+            total_exp = parseInt(current_year) - parseInt(year_tag.getAttribute('val'));
+            year_tag.innerHTML = total_exp + " years";
+        });
+    </script>
 </body>
+
 </html>
