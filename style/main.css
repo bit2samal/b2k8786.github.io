@@ -1,5 +1,5 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200&display=swap');
+
 body {
     background: #eee;
     margin: 0;
@@ -8,9 +8,26 @@ body {
     color: #777;
     perspective: 1000px;
     perspective-origin: 0px;
-    transform: translate3d(22,34,44);
+    transform: translate3d(22, 34, 44);
     transform-origin: center center;
 }
+
+div {
+    position: relative;
+}
+
+a:link,
+a​:visited,
+a​:active {
+    color: rgb(27, 27, 27);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(27, 27, 27);
+    font-weight: bold;
+}
+
 .block {
     max-width: 1200px;
     background: #fff;
@@ -24,23 +41,65 @@ body {
     transition: all .2s ease-in-out 0s;
     z-index: 0;
 }
-.block:hover{
+
+.block:hover {
     z-index: 1;
 }
-.block-title{
+
+.block-title {
     font-size: 24px;
     color: #444;
     font-style: italic;
     font-weight: 600;
 }
-.block li{
+ul#nav {
     list-style: none;
+    display: inline-flex;
+}
+ul#nav li{
+    background-color: #fff;
+}
+ul.summary {
+    margin: 10px 0px 0px;
+    padding: 0px;
+}
+
+ul.summary>li {
+    list-style: "-";
+    padding-left: 10px;
+}
+
+span.sub-title {
+    font-size: 14pt;
+    padding-right: 10pt;
+    color: #444;
+    font-weight: 600;
+}
+
+#major_projects ul.summary>li {
+    list-style: none;
+    margin-bottom: 16px;
+    background-color: #fefefe;
+    box-shadow: 3px 4px 2px -2px #cccd;
+    padding: 15px;
+    border: 1px #efefef solid;
+}
+#major_projects ul.summary > li > ul > li{
+    list-style: disc;
+}
+
+.block li {
     line-height: 1.5em;
 }
+
 #header {
-    text-align: right;
-     margin: 75px auto 0px;
-     z-index: 99;
+    margin: 75px auto 0px;
+    z-index: 99;
+}
+
+.info span.title {
+    width: 75px;
+    display: inline-block;
 }
 
 #my-image {
@@ -52,13 +111,16 @@ body {
     border-radius: 50%;
     position: absolute;
     top: -25%;
-    border:15px solid #eee;
+    right: 50px;
+    border: 15px solid #eee;
 }
-name{
+
+name {
     font-size: 55px;
     display: block;
 }
-email{
+
+email {
     font-size: 24px;
     color: #888;
 }

@@ -1,0 +1,268 @@
+{
+    "info": [
+        {
+            "type": "string",
+            "title": "Name",
+            "text": "Anil kumar Samal"
+        },
+        {
+            "type": "email",
+            "title": "Email",
+            "text": "meet2anil.samal@gmail.com"
+        },
+        {
+            "type": "hyperlink",
+            "title": "LinkedIn",
+            "text": "https://www.linkedin.com/in/ak-samal/"
+        },
+        {
+            "type": "phone",
+            "title": "Contact",
+            "text": "+91 9888 450013"
+        }
+    ],
+    "exp_summary": {
+        "title": "Experience Summary",
+        "text": "Total 10 years of IT work experience through the entire Software Development Life Cycle as <br> 7 years Backend and fullstack <br> 3 years approximate  as a Golang backend developer <br>"
+    },
+    "prof_summary": {
+        "title": "Professional Summary",
+        "summary": [
+            "Experience PHP, JavaScript, HTML, CSS & Golang",
+            "Solid understanding of object-oriented programming",
+            "Good understanding of REST APIs, cron jobs and schedulers",
+            "Good understanding of front-end technologies",
+            "Familiarity with concepts of ORM, and Restful",
+            "Tend to  writing clean, easy readable and reusable code",
+            "Ability to integrate multiple data sources and databases into one system",
+            "Understanding of fundamental design principles behind a scalable application",
+            "Able to create database schemas that represent and support business processes",
+            "Proficient understanding of code versioning tools",
+            "Familiarity with continuous integration",
+            "Familiar with Redis, Git, GCP, AWS, Heroku, NATS, Datadog, rollbar etc"
+        ]
+    },
+    "academics": {
+        "title": "Academic Credentials",
+        "summary": [
+            "MCA from Punjab Technical University 2010, 65% First divison",
+            "BA form  Punjabi  University 2008, Third division",
+            "12th from  CBSE Board 2004, Third division"
+        ]
+    },
+    "skills": {
+        "title": "IT Skill set",
+        "summary": [
+            {
+                "title": "Server Management",
+                "text": "AmazonEC2, Digital Ocean, Heroku, GCP"
+            },
+            {
+                "title": "Programming Languages",
+                "text": "PHP, Javascript, Golang"
+            },
+            {
+                "title": "Framework",
+                "text": "Laravel, JQuery, chi routers, testify, gorilla mux"
+            },
+            {
+                "title": "Frontend",
+                "text": "HTML, CSS, Javascript"
+            },
+            {
+                "title": "Operating System",
+                "text": "WINDOWS, UNIX, LINUX, OSX"
+            },
+            {
+                "title": "Software Tools",
+                "text": "VS Code, DBeaver, docker, GIT"
+            },
+            {
+                "title": "Team Management Tools",
+                "text": "Slack, Trello, Zira"
+            }
+        ]
+    },
+    "prof_exp": {
+        "title": "Professional Experience",
+        "summary": [
+            "Module Lead with Ionixx technologies (Chennai) April 2022 - Till date",
+            "Software engineer with Covalense Digital (Banglore) Nov 2021 -Apr 2022",
+            "Software engineer with Founder and lightning (Mohali) Oct 2020 - Nov 2021",
+            "Software engineer with Conjoinix total solutions Pvt. Ltd. (Chandigarh) Jan 2016 - Oct 2020",
+            "Software engineer with 89 Business Street (Mohali) Sep 2014 - Jan 2016",
+            "Software engineer with JS Software solutions (Mohali) June 2013- July 2014"
+        ]
+    },
+    "major_projects": {
+        "title": "Major Projects",
+        "data": [
+            {
+                "project_name": "OfficeDeals.nl",
+                "duration": "May 2014 –April 2015",
+                "organization": "89 Business Street",
+                "link": "http://OfficeDeals.nl",
+                "desc": "This is a e-commerce platform which sells office requirement and stationary",
+                "role": [
+                    "Management of servers and handling issues regarding to it performance",
+                    "Fixing bugs and resolving bottleneck",
+                    "Integration of monitoring services",
+                    "Designing and coding of web applications through use of PHP, HTML, CSS & Javascript",
+                    "Code reviews to make necessary adjustments prior to execution",
+                    "Handled database using MySQL",
+                    "Implementing checkouts and payment gateways"
+                ],
+                "env": [
+                    "Linux",
+                    "PHP",
+                    "MVC",
+                    "REST Services",
+                    "Html",
+                    "Mysql"
+                ]
+            },
+            {
+                "project_name": "XSSecure (Vehicle tracking and security)",
+                "duration": "Jan 2016 – Feb 2017",
+                "organization": "Conjoinix total solutions Pvt. Ltd",
+                "link": "http://www.xssecure.com/",
+                "desc": "A platform where use can track their vehicles and monitor the activities like geofence alarm, tow alert, overspeed alert, theft alert  with fuel efficiency monitor and vehicle running distance monitor",
+                "role": [
+                    "Management of servers and handling issues regarding to it performance",
+                    "Fixing bugs and resolving bottleneck",
+                    "Integration of monitoring services",
+                    "Designing and coding of web applications through use of PHP, HTML, CSS & Javascript",
+                    "Code reviews to make necessary adjustments prior to execution",
+                    "Handled database using MySQL",
+                    "Revamp the complete application for performance"
+                ],
+                "env": [
+                    "Linux",
+                    "PHP",
+                    "MVC",
+                    "REST Services",
+                    "Html",
+                    "Mysql"
+                ]
+            },
+            {
+                "project_name": "Fleet Management service",
+                "duration": "April 2017 – Jan 2018",
+                "organization": "Conjoinix total solutions Pvt. Ltd",
+                "link": "Private server",
+                "desc": " Application built to facilitate the management of texi service fleet and booking Application use  to add new bookings, track driver’s availability, vehicle service & maintenance notification",
+                "role": [
+                    "Designed and developed the backend and developed the frontend",
+                    "Management of servers and handling issues regarding to it performance",
+                    "Fixing bugs and resolving bottleneck",
+                    "Integration of monitoring services",
+                    "Designing and coding of web applications through use of PHP, HTML, CSS & Javascript",
+                    "Handled database using MySQL"
+                ],
+                "env": [
+                    "Linux",
+                    "PHP",
+                    "MVC",
+                    "REST Services",
+                    "Html",
+                    "Mysql"
+                ]
+            },
+            {
+                "project_name": "Tansen music school",
+                "duration": "March 2018 – May  2019",
+                "organization": "Conjoinix total solutions Pvt. Ltd",
+                "link": "https://play.google.com/store/apps/details?id=com.music.tansen&pli=1",
+                "desc": "Application to facilitate the institution and student to manage admissions, fee payment, class schedule, teacher,s leave, student’s leave, publish and registration for events and and mark attendance for teacher and students",
+                "role": [
+                    "Designed and developed the backend and developed the frontend for admin portal",
+                    "Management of servers and handling issues regarding to it performance",
+                    "Fixing bugs and resolving bottleneck",
+                    "Integration of monitoring services",
+                    "Designing and coding of web applications through use of PHP, HTML, CSS & Javascript",
+                    "Handled database using MySQL"
+                ],
+                "env": [
+                    "Linux",
+                    "PHP",
+                    "MVC",
+                    "REST Services",
+                    "Html",
+                    "Mysql"
+                ]
+            },
+            {
+                "project_name": "Easy Kirana",
+                "duration": "June 2019 – Sep  2020",
+                "organization": "Conjoinix total solutions Pvt. Ltd",
+                "link": "https://easykirana.in/",
+                "desc": "An E-commerce platform to sell daily groceries",
+                "role": [
+                    "Designed and developed the backend and developed the frontend & Admin portal",
+                    "Management of servers and handling issues regarding to it performance",
+                    "Fixing bugs and resolving bottleneck",
+                    "Integration of monitoring services",
+                    "Designing and coding of web applications through use of PHP, HTML, CSS & Javascript, Golang",
+                    "Handled database using MySQL"
+                ],
+                "env": [
+                    "Linux",
+                    "PHP",
+                    "Golang",
+                    "MVC",
+                    "REST SERVICES",
+                    "Html",
+                    "Mysql",
+                    "Ngnix"
+                ]
+            },
+            {
+                "project_name": "Elate Date",
+                "duration": "Dec 2020 –  Oct 2021",
+                "organization": "Founder + Lightning",
+                "link": "https://www.elatedate.com/",
+                "desc": "A dating app with anti ghosting feature and easy to use",
+                "role": [
+                    "Designed and developed the backend APIs",
+                    "Management of servers and handling issues regarding to it performance",
+                    "Fixing bugs and resolving bottleneck",
+                    "Integration of monitoring services",
+                    "Designing and coding of web applications through use of PHP, Golang",
+                    "Handled database using PostgreSQL"
+                ],
+                "env": [
+                    "Linux",
+                    "PHP",
+                    "Golang",
+                    "MVC",
+                    "REST services",
+                    "Mysql",
+                    "Heroku",
+                    "terraform",
+                    "circleCI",
+                    "rollbar"
+                ]
+            },
+            {
+                "project_name": "Mojito",
+                "duration": "April 2022 –  June 2023",
+                "organization": "Ionixx technologies",
+                "link": "https://developers.mojito.xyz/docs",
+                "desc": "It facilitate users to create NFT marketplace",
+                "role": [
+                    "Designed features and developed the backend APIs",
+                    "Handling issues & Fixing bugs and resolving bottleneck",
+                    "Handled database using Postgresql"
+                ],
+                "env": [
+                    "Linux",
+                    "Golang",
+                    "GrapgQ",
+                    "Postgresql",
+                    "GCP",
+                    "Git Actions"
+                ]
+            }
+        ]
+    }
+}

@@ -11,89 +11,172 @@
 
 <body>
     <section class="block" id="header">
-        <div id="my-image"></div>
-        <div id="my-info">
-            <name>Anil kumar Samal</name>
-            <email>b2k8786@gmail.com</email>
-        </div>
+    </section>
+    <ul id="nav">
+        <li><a href="#exp_summary">Experience Summary</a></li>
+        <li><a href="#prof_summary">Professional Summary</a></li>
+        <li><a href="#skills">Skill</a></li>
+        <li><a href="#major_projects">Major Projects</a></li>
+        <li><a href="#education">Academic</a></li>
+    </ul>
+    <section class="block" id="exp_summary">
+    </section>
+    <section class="block" id="prof_summary">
+    </section>
+    <section class="block" id="prof_exp">
+    </section>
+    <section class="block" id="skills">
+    </section>
+    <section class="block" id="major_projects">
     </section>
     <section class="block" id="education">
-        <span class="block-title">Education / Certifications</span>
-        <Ul>
-            <li>Masters in computer Applications (MCA)</li>
-            <li>PHP from NIIT</li>
-            <li>Diploma in PC Architecture & Networking</li>
-            <li>Six month Software Training in Advance Java</li>
-        </Ul>
     </section>
-    <section class="block" id="experience">
-        <span class="block-title">Work History (experience <year val="2014">8</year>)</span>
-        <Ul>
-            <li>JS software solutions (1 year)</li>
-            <li>89 Business street (1 year 6 months)</li>
-            <li>Conjoinix (4 years 9 months)</li>
-            <li>Founder and lightning (AKA Ucreate.it) (1 year)</li>
-        </Ul>
-    </section>
-    <section class="block" id="Skills">
-        <span class="block-title">Technical skills</span>
-        <Ul>
-            <li>
-                PHP (8 years)
-                <ul>
-                    <li>
-                        Worked on various frameworks.
-                        Good knowledge of Core architecture.
-                        Created custom frameworks.
 
-                    </li>
-                </ul>
-            </li>
-            <li>
-                JavaScript (7 years)
-                <ul>
-                    <li>
-                        Good knowledge of javascript, jQuery.
-                        Created various libraries and frameworks in javascript and jQuery.
-
-                    </li>
-                </ul>
-            </li>
-            <li>
-                HTML & CSS (7 years)
-                <ul>
-                    <li>
-                        Good knowledge of CSS and can create and handle complete site and advance css
-                    </li>
-                </ul>
-            </li>
-            <li>
-                Node JS (3 years)
-                <ul>
-                    <li>
-                        Created BE APIs and work with express framework and core node js
-                    </li>
-                </ul>
-            </li>
-            <li>
-                Golang (1 year)
-                <ul>
-                    <li>
-                        Some initial knowledge of golang and pursuing it to expertise.
-                    </li>
-                </ul>
-            </li>
-        </Ul>
-    </section>
-    <!-- <section class="block" id="education">
-        <span class="block-title">Education / Certifications</span>
-        <Ul>
-            <li>PHP from NIIT</li>
-            <li>Diploma in PC Architecture & Networking</li>
-            <li>Six month Software Training in Advance Java (BTES)</li>
-        </Ul>
-    </section> -->
     <script>
+        infoElem = document.querySelector("#header")
+        fetch('data.json')
+            .then((response) => response.json())
+            .then((cv) => {
+                if (cv.info != null && cv.info.length) {
+                    infoHtml = ""
+                    cv.info.forEach((info) => {
+                        switch (info.type) {
+                            case "string":
+                                infoHtml += `
+                                                <div class="info">
+                                                    <span class="title">${info.title}</span>
+                                                    <span class="text">${info.text}</span>
+                                                </div>`;
+                                break;
+                            case "email":
+                                infoHtml += `
+                                                <div class="info">
+                                                    <span class="title">${info.title}</span>
+                                                    <span class="text"><a href="mailto:${info.text}">${info.text}</a></span>
+                                                </div>`;
+                                break;
+                            case "hyperlink":
+                                infoHtml += `
+                                                <div class="info">
+                                                    <span class="title">${info.title}</span>
+                                                    <span class="text"><a href="${info.text}">${info.text}</a></span>
+                                                </div>`;
+                                break;
+                            case "phone":
+                                infoHtml += `
+                                                <div class="info">
+                                                    <span class="title">${info.title}</span>
+                                                    <span class="text"><a href="tel:${info.text}">${info.text}</a></span>
+                                                </div>`;
+                                break;
+                        }
+                    })
+                    infoElem.innerHTML = infoHtml + "<div id='my-image'></div>"
+                }
+
+
+                document.querySelector("#exp_summary").innerHTML = `
+                <div class="block-title">${cv.exp_summary.title}</div>
+                <div class="text">${cv.exp_summary.text}</div>
+                `
+
+                document.querySelector("#prof_summary").innerHTML = `
+                <div class="block-title">${cv.prof_summary.title}</div>
+                <ul class=\"summary\">`+
+                    (() => {
+                        html = ""
+                        cv.prof_summary.summary.forEach((prof) => {
+                            html += `<li>${prof}</li>`
+                        })
+                        html += "</ul>"
+                        return html
+                    })()
+                    + "</ul>"
+
+
+                document.querySelector("#prof_exp").innerHTML = `
+                <div class="block-title">${cv.prof_exp.title}</div>
+                <ul class="summary">`+
+                    (() => {
+                        html = ""
+                        cv.prof_exp.summary.forEach((prof) => {
+                            html += `<li>${prof}</li>`
+                        })
+                        html += "</ul>"
+                        return html
+                    })()
+                    + "</ul>"
+
+
+                document.querySelector("#skills").innerHTML = `
+                <div class="block-title">${cv.skills.title}</div>
+                <ul class="summary">`+
+                    (() => {
+                        html = ""
+                        cv.skills.summary.forEach((skill) => {
+                            html += `<li><span class="sub-title">${skill.title}</span>${skill.text}</li>`
+                        })
+                        return html
+                    })()
+                    + `</ul>`
+
+                document.querySelector("#major_projects").innerHTML = `
+                <div class="block-title">${cv.major_projects.title}</div>
+                <ul class="summary">`+
+                    (() => {
+                        html = ""
+                        cv.major_projects.data.forEach((project) => {
+                            html += `<li>
+                                        <div class="sub-item">
+                                            <span class="sub-title">Project Name</span>${project.project_name}
+                                        </div>
+                                        <div class="sub-item">
+                                            <span class="sub-title">Link</span>`+
+                                (() => {
+                                    if (project.link.search("http") >= 0) {
+                                        return `<a href='${project.link}'>${project.link}</a>`
+                                    }
+                                    return project.link
+                                })()
+                                + `</div>
+                                        <div class="sub-item">
+                                            <span class="sub-title">Organization</span>${project.organization}
+                                        </div>
+                                        <div class="sub-item">
+                                            <span class="sub-title">Description</span><br>
+                                            ${project.desc}
+                                        </div>`+
+                                (() => {
+                                    html = "<span class='sub-title'>Role</span><ul>"
+                                    project.role.forEach((r) => {
+                                        html += `<li>${r}</li>`
+                                    })
+                                    html += "</ul>"
+                                    return html
+                                })()
+                                + "<span class='sub-title'>Environment</span>" + project.env.join(", ")
+                                + `</li>`
+                        })
+                        return html
+                    })()
+                    + `</ul>`
+
+
+                document.querySelector("#education").innerHTML = `
+                <div class="block-title">${cv.academics.title}</div>
+                <ul class="summary">`+
+                    (() => {
+                        html = ""
+                        cv.academics.summary.forEach((edu) => {
+                            html += `<li>${edu}</li>`
+                        })
+                        return html
+                    })()
+                    + `</ul>`
+
+            }); // render
+
+
         var current_year = (new Date()).getFullYear();
         document.querySelectorAll('year').forEach((year_tag) => {
             total_exp = parseInt(current_year) - parseInt(year_tag.getAttribute('val'));
