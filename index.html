@@ -191,8 +191,9 @@
             elm.addEventListener('click', e => {
                 target = e.target.getAttribute("link")
                 srclto = document.querySelector(target).offsetTop
+                navHt = document.querySelector("#nav").clientHeight +15
                 window.scrollTo({
-                    top: srclto - 95,
+                    top: srclto - navHt,
                     left: 0,
                     behavior: "smooth",
                 });
