@@ -12,13 +12,15 @@
 <body>
     <section class="block" id="header">
     </section>
-    <ul id="nav">
-        <li><span link="#exp_summary">Experience Summary</span></li>
-        <li><span link="#prof_summary">Professional Summary</span></li>
-        <li><span link="#skills">Skill</span></li>
-        <li><span link="#major_projects">Major Projects</span></li>
-        <li><span link="#education">Academic</span></li>
-    </ul>
+    <section class="block" id="nav">
+        <ul>
+            <li><span link="#exp_summary">Experience Summary</span></li>
+            <li><span link="#prof_summary">Professional Summary</span></li>
+            <li><span link="#skills">Skill</span></li>
+            <li><span link="#major_projects">Major Projects</span></li>
+            <li><span link="#education">Academic</span></li>
+        </ul>
+    </section>
     <section class="block" id="exp_summary">
     </section>
     <section class="block" id="prof_summary">
@@ -186,9 +188,9 @@
 
         document.querySelectorAll("#nav li span").forEach(elm => {
             console.log(elm)
-            elm.addEventListener('click',e => {
+            elm.addEventListener('click', e => {
                 target = e.target.getAttribute("link")
-                srclto  =document.querySelector(target).offsetTop
+                srclto = document.querySelector(target).offsetTop
                 window.scrollTo({
                     top: srclto - 95,
                     left: 0,
