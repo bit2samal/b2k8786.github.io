@@ -13,11 +13,11 @@
     <section class="block" id="header">
     </section>
     <ul id="nav">
-        <li><a href="#exp_summary">Experience Summary</a></li>
-        <li><a href="#prof_summary">Professional Summary</a></li>
-        <li><a href="#skills">Skill</a></li>
-        <li><a href="#major_projects">Major Projects</a></li>
-        <li><a href="#education">Academic</a></li>
+        <li><span link="#exp_summary">Experience Summary</span></li>
+        <li><span link="#prof_summary">Professional Summary</span></li>
+        <li><span link="#skills">Skill</span></li>
+        <li><span link="#major_projects">Major Projects</span></li>
+        <li><span link="#education">Academic</span></li>
     </ul>
     <section class="block" id="exp_summary">
     </section>
@@ -182,6 +182,21 @@
             total_exp = parseInt(current_year) - parseInt(year_tag.getAttribute('val'));
             year_tag.innerHTML = total_exp + " years";
         });
+
+
+        document.querySelectorAll("#nav li span").forEach(elm => {
+            console.log(elm)
+            elm.addEventListener('click',e => {
+                target = e.target.getAttribute("link")
+                srclto  =document.querySelector(target).offsetTop
+                window.scrollTo({
+                    top: srclto - 95,
+                    left: 0,
+                    behavior: "smooth",
+                });
+            })
+        })
+
     </script>
 </body>
 

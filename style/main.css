@@ -55,17 +55,25 @@ a:hover {
 
 ul#nav {
     list-style: none;
-    display: inline-flex;
+    display: block;
     position: sticky;
     z-index: 999;
     top: 0;
     background-color: #fff;
-    padding: 10px 0px 10px 40px;
-    border-radius: 0px 33px 33px 0px;
+    padding: 15px;
+    text-align: center;
     box-shadow: -1px 1px 5px 0px #0004;
+    width: 65vw;
+    margin: 20px auto;
 }
 
-ul#nav li a {
+ul#nav li {
+    display: inline-block;
+    width: 207px;
+    cursor: pointer;
+}
+
+ul#nav li span {
     text-align: center;
     margin: 0px 9px 0px 0px;
     padding: 15px;
